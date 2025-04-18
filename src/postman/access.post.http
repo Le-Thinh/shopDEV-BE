@@ -2,22 +2,23 @@
 
 ### signup
 
-# POST {{url_dev}}/shop/signup
-# Content-Type: application/json
-# x-api-key: ce0c97aaf537cc0fee6bcb513dd8968738f2fb01e9061c19ce0757a4f17e5a8d137ff0316b05a2f41eba45229213f976a23c7cf104dea31d80d3b4916906fe19
-
-# {
-#     "name": "SHOP TIPS 2",
-#     "email": "newshop04@gmail.com",
-#     "password": "abc123"
-# }
-
-
-POST {{url_dev}}/shop/login
+POST {{url_dev}}/shop/signup
 Content-Type: application/json
-x-api-key: ce0c97aaf537cc0fee6bcb513dd8968738f2fb01e9061c19ce0757a4f17e5a8d137ff0316b05a2f41eba45229213f976a23c7cf104dea31d80d3b4916906fe19
+x-api-key: aaaabbbbccccc
 
 {
+    "name": "SHOP TIPS 2",
     "email": "newshop04@gmail.com",
     "password": "abc123"
 }
+
+
+# POST {{url_dev}}/shop/signup
+# Content-Type: application/json
+# //x-api-key: ce0c97aaf537cc0fee6bcb513dd8968738f2fb01e9061c19ce0757a4f17e5a8d137ff0316b05a2f41eba45229213f976a23c7cf104dea31d80d3b4916906fe19
+
+# {
+#     "email": "newshop01@gmail.com",
+#     "password": "abc123"
+# }
+
