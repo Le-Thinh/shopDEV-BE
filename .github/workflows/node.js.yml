@@ -30,5 +30,7 @@ jobs:
         echo "DEV_DB_HOST=${{ secrets.DEV_DB_HOST }}" >> .env
         echo "DEV_DB_PORT=${{ secrets.DEV_DB_PORT }}" >> .env
         echo "DEV_DB_NAME=${{ secrets.DEV_DB_NAME }}" >> .env
+        echo "DISCORD_TOKEN=${{ secrets.DISCORD_TOKEN }}" >> .env
+        echo "DISCORD_CHANNEL_ID=${{ secrets.DISCORD_CHANNEL_ID }}" >> .env
     - run: npm ci
     - run: pm2 restart shopdev-backend
