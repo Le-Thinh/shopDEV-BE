@@ -6,7 +6,7 @@ const router = express.Router();
 const { pushToLogDiscord } = require("../middlewares/index");
 
 // add log to discord
-router.use(pushToLogDiscord);
+// router.use(pushToLogDiscord);
 //check apiKey
 router.use(apiKey);
 // check permission
