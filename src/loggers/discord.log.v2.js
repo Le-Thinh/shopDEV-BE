@@ -3,6 +3,8 @@ const { Client, GatewayIntentBits } = require("discord.js");
 
 const { DISCORD_CHANNEL_ID, DISCORD_TOKEN } = process.env;
 
+const discordToken = process.env.DISCORD_TOKEN;
+
 class LoggerService {
   constructor() {
     this.client = new Client({
@@ -19,7 +21,7 @@ class LoggerService {
     this.client.on("ready", () => {
       console.log(`Logged in as ${this.client.user.tag}!`);
     });
-    this.client.login(DISCORD_TOKEN);
+    this.client.login(discordToken);
   }
 
   sendToFormatCode(logData) {
