@@ -23,5 +23,12 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+
+    - name: Create .env file
+      run: |
+        echo "DEV_APP_PORT=${{ secrets.DEV_APP_PORT }}" >> .env
+        echo "DEV_DB_HOST=${{ secrets.DEV_DB_HOST }}" >> .env
+        echo "DEV_DB_PORT=${{ secrets.DEV_DB_PORT }}" >> .env
+        echo "DEV_DB_NAME=${{ secrets.DEV_DB_NAME }}" >> .env
     - run: npm ci
     - run: pm2 restart shopdev-backend
