@@ -32,5 +32,10 @@ jobs:
         echo "DEV_DB_NAME=${{ secrets.DEV_DB_NAME }}" >> .env
         echo "DISCORD_TOKEN=${{ secrets.DISCORD_TOKEN }}" >> .env
         echo "DISCORD_CHANNEL_ID=${{ secrets.DISCORD_CHANNEL_ID }}" >> .env
+
+    - name: Debug .env file (optional)
+      run: |
+        grep -v 'DISCORD_TOKEN' .env | grep -v 'DISCORD_CHANNEL_ID'
+        
     - run: npm ci
     - run: pm2 restart shopdev-backend
